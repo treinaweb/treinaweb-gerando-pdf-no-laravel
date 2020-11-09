@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ApresentacaoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/olamundo', ['ApresentacaoController', 'olaMundo']);
+Route::get('olamundo', [ApresentacaoController::class, 'olaMundo']);
