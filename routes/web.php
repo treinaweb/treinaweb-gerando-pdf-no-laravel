@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('olamundo', [ApresentacaoController::class, 'olaMundo']);
 Route::get('cursos', [ApresentacaoController::class, 'cursos']);
+Route::get('wiki', [ApresentacaoController::class, 'wiki']);

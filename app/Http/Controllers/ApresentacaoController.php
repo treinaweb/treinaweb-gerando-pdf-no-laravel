@@ -30,4 +30,11 @@ class ApresentacaoController
 
         return $domPdf->stream();
     }
+
+    public function wiki()
+    {
+        $domPdf = PDF::loadFile(public_path() . '/treinaweb-wiki.html');
+
+        return $domPdf->stream();
+    }
 }
