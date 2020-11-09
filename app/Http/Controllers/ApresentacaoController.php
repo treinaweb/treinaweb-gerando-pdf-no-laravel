@@ -12,4 +12,22 @@ class ApresentacaoController
 
         return $domPdf->stream();
     }
+
+    public function cursos()
+    {
+        $cursos = [
+            'php' => [
+                'nome' => 'curso PHP',
+                'versao' => 8
+            ],
+            'java' => [
+                'nome' => 'curso de Java',
+                'versao' => 12
+            ]
+        ];
+
+        $domPdf = PDF::loadView('cursos', compact('cursos'));
+
+        return $domPdf->stream();
+    }
 }
