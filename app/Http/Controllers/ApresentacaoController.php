@@ -36,6 +36,9 @@ class ApresentacaoController
         $domPdf = PDF::loadFile(public_path() . '/treinaweb-wiki.html');
 
         //return $domPdf->stream();
-        return $domPdf->save(public_path() . '/treinaweb.pdf')->stream();
+        return $domPdf
+            ->setPaper('a3', 'landscape')
+            ->save(public_path() . '/treinaweb.pdf')
+            ->stream();
     }
 }
